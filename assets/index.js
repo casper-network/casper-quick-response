@@ -69,4 +69,6 @@ function make(address, amount, transaction_id) {
   console.log(url);
   qrcode.clear();
   qrcode.makeCode(url);
+  document.getElementById("qrlink").href = url;
+  document.getElementById("downlink").href = document.querySelector('img').src;
 }
