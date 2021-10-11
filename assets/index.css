@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#viewable {
+  background-color: white;
+  width: 100vw;
+  min-height: 85vh;
+  padding-top: 15vh;
+}
+
+#interactable {
+  display: flex;
+  justify-content: center;
+}
+
+#leftside {
+  margin-right: 2vw;
+}
+
+#rightside {
+  min-width: 25vw;
+  margin-left: 2vw;
+}
+
+#QRLogoHolder {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  width: 25vw;
+  height: 25vw;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  padding-top: 5%;
+  justify-content: space-between;
+}
+
+.sexifiable {
+  border: none;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  background: linear-gradient(to left, #dedede 50%, #ffa8a8 50%) right;
+  background-size: 200%;
+  transition: .5s ease-in;
+  padding-left: 2%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sexifiable:hover {
+  background-position: left;
+}
+
+.sexifiable:focus {
+  background-position: left;
+}
+
+#qrcode {
+  width: 25vw;
+  height: 25vw;
+  padding: 10px;
+  display: none;
+}
+
+#netSwitch {
+  display: flex;
+  align-items: center;
+}
+
+#netSwitch p {
+  margin: 0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff473e;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff473e;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#csprline {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  margin-top: 3vh;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  #viewable {
+    padding-top: 5vh;
+  }
+
+  #interactable {
+    flex-direction: column;
+  }
+
+  #leftside, #rightside {
+    margin: 0;
+  }
+
+  #qrcode {
+    width: 80vw;
+    height: 80vw;
+    margin: auto;
+  }
+
+  #QRLogoHolder {
+    margin: auto;
+    width: 80vw;
+    height: 80vw;
+  }
+
+  #netSwitch {
+    margin-bottom: 2vh;
+    font-size: 2rem;
+  }
+
+  .switch {
+    width: 100px;
+    height: 56.666px;
+  }
+
+  .slider:before {
+    height: 48.666px;
+    width: 48.666px;
+  }
+
+  .slider.round {
+    border-radius: 56.666px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(42.666px);
+    -webkit-transform: translateX(42.666px);
+    -ms-transform: translateX(42.666px);
+  }
+
+  .sexifiable {
+    margin-bottom: 2vh;
+    width: 80%;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
+
+@media (min-aspect-ratio: 20/9) {
+  #viewable {
+    min-height: 90vh;
+    padding-top: 10vh;
+  }
+
+  #qrcode {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  #QRLogoHolder {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .sexifiable {
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+}
