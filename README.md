@@ -9,6 +9,8 @@ The project is live at https://casperqr.dylanireland.com
 
 ![Screenshot of app](https://casperqr.dylanireland.com/assets/ss.png)
 
+For a visual demonstration, please watch [this video](https://youtu.be/EVz5kLb3QvI)
+
 ## Installation
 
 ```
